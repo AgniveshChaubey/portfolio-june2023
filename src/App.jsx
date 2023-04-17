@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import {
   BrowserRouter as Router,
   Route,
-  Switch,
+  redirect as Redirect,
 } from "react-router-dom";
 
 import { ThemeContext } from "./contexts/ThemeContext";
@@ -17,13 +17,18 @@ function App() {
   return (
     <div className="app">
       <Router>
-        <ScrollToTop />
-        <Switch>
-          <Route path="/" exact component={Main} />
-          <Route path="/blog" exact component={BlogPage} />
-          <Route path="/projects" exact component={ProjectPage} />
-
-        </Switch>
+        <ScrollToTop/>
+        {(() => {
+          if (window.location.pathname === '/') {
+            return <Route path="/" exact component={Main} />;
+          } else if (window.location.pathname === '/blog') {
+            return <Route path="/blog" exact component={BlogPage} />;
+          } else if (window.location.pathname === '/projects') {
+            return <Route path="/projects" exact component={ProjectPage} />;
+          } else {
+            return <Redirect to="/" />;
+          }
+        })()}
       </Router>
       <BackToTop />
     </div>
