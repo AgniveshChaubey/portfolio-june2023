@@ -6,14 +6,16 @@ import {
 } from "react-router-dom";
 
 import { ThemeContext } from "./contexts/ThemeContext";
-// import { Main, BlogPage, ProjectPage } from "./pages";
-// import { BackToTop } from "./components";
+import { Main } from "./myPage/Main";
+import { BlogPage } from "./myPage/BlogPage";
+import { ProjectPage } from "./myPage/ProjectPage";
+import { BackToTop } from "./components/BackToTop";
 import ScrollToTop from "./utils/ScrollToTop";
 
 import "./App.css";
 
 function App() {
-  const { theme } = useContext(ThemeContext);
+  // const { theme } = useContext(ThemeContext);
   return (
     <div className="app">
       <Router>
