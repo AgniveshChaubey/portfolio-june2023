@@ -5,11 +5,11 @@ import { Link } from 'react-router-dom'
 import { makeStyles } from '@material-ui/core/styles';
 import { AiOutlineHome } from "react-icons/ai";
 
-import './ProjectPage.css'
-import { SingleProject } from '../../components';
-import { ThemeContext } from '../../contexts/ThemeContext';
-import { projectsData } from '../../data/projectsData'
-import { headerData } from '../../data/headerData'
+import './ProjectPage.css';
+// import { SingleProject } from '../components';
+import { ThemeContext } from '../contexts/ThemeContext';
+import { projectsData } from '../data/projectsData';
+import { headerData } from '../data/headerData';
 
 function ProjectPage() {
 
