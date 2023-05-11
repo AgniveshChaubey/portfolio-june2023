@@ -9,7 +9,7 @@ import { ThemeContext } from "./contexts/ThemeContext";
 import { Main } from "./myPage/Main";
 import { BlogPage } from "./myPage/BlogPage";
 import { ProjectPage } from "./myPage/ProjectPage";
-import { BackToTop } from "./components/BackToTop";
+import { BackToTop } from "./components/BackToTop/BackToTop";
 import ScrollToTop from "./utils/ScrollToTop";
 
 import "./App.css";
