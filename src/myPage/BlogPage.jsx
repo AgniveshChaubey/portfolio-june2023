@@ -9,7 +9,7 @@ import './BlogPage.css';
 // import { SingleBlog } from '../components';
 import { ThemeContext } from '../contexts/ThemeContext';
 import { blogData } from '../data/blogData';
-import { headerData } from '../../data/headerData'
+import { headerData } from '../data/headerData';
 
 function BlogPage() {
 
