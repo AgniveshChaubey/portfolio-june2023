@@ -11,7 +11,7 @@ import { ThemeContext } from '../contexts/ThemeContext';
 import { blogData } from '../data/blogData';
 import { headerData } from '../data/headerData';
 
-function BlogPage() {
+export function BlogPage() {
 
     const [search, setSearch] = useState('')
     const { theme } = useContext(ThemeContext);
@@ -104,4 +104,4 @@ function BlogPage() {
     )
 }
 
-export default BlogPage
+
