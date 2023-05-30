@@ -1,4 +1,4 @@
-import { blueThemegirl, blueThemeboy, eduBlue, expBlue, contactsBlue } from './images';
+import { blueThemeboy, eduBlue, expBlue, contactsBlue } from './images';
 
 export const blueThemeLight = {
     type: 'light',
@@ -16,7 +16,6 @@ export const blueThemeLight = {
     tertiary70: '#212121b3',
     tertiary50: '#21212180',
     aboutimg1: blueThemeboy,
-    aboutimg2: blueThemegirl,
     eduimg: eduBlue,
     expimg: expBlue,
     contactsimg: contactsBlue
@@ -37,7 +36,6 @@ export const blueThemeDark = {
     tertiary70: '#eaeaeab3',
     tertiary50: '#eaeaea80',
     aboutimg1: blueThemeboy,
-    aboutimg2: blueThemegirl,
     eduimg: eduBlue,
     expimg: expBlue,
     contactsimg: contactsBlue

@@ -16,11 +16,11 @@ function App() {
   const { theme } = useContext(ThemeContext);
 
   console.log(
-    "%cDEVELOPER PORTFOLIO",
+    "%cPORTFOLIO - AGNIVESH",
     `color:${theme.primary}; font-size:50px`
   );
   console.log(
-    "%chttps://github.com/hhhrrrttt222111/developer-portfolio",
+    "%chttps://github.com/AgniveshChaubey",
     `color:${theme.tertiary}; font-size:20px`
   );
   // console.log = console.warn = console.error = () => {};
