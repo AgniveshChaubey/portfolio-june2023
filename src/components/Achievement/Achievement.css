@@ -60,7 +60,7 @@
     align-items: flex-start;
     justify-content: space-around;
     width: 65%;
-
+   
 }
 
 .achievecard-details2 {
@@ -76,7 +76,7 @@
 }
 
 .achievecard-details2 h5 {
-    width: 50%;
+   width: 50%;
 }
 
 .achievecard-field {
@@ -108,7 +108,7 @@
     width: 23%;
 }
 
-.achievecard-imgcontainer>img {
+.achievecard-imgcontainer > img {
     width: 150px;
     height: 130px;
     border-radius: 10px;
@@ -127,27 +127,25 @@
         flex: 0.3;
         width: 90%;
     }
-
     .achievement-body h1 {
         font-family: var(--primaryFont);
         font-size: 3.1rem;
     }
-
+    
     .achievement-cards {
         padding: 1rem;
         margin-left: 1%;
         width: 100%;
         flex: 0.7;
     }
-
     .achievecard-imgcontainer {
-        margin-left: 1rem;
+       margin-left: 1rem;
     }
 
 }
 
 @media screen and (max-width: 992px) {
-    .achievement {
+    .achievement{
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -203,21 +201,20 @@
     .achievecard-imgcontainer {
         width: 30%;
         display: flex;
-        justify-content: center;
+       justify-content: center;
     }
 
-    .achievecard-imgcontainer>img {
+    .achievecard-imgcontainer > img {
         width: 80px;
         height: 70px;
     }
-
+    
 }
 
 @media screen and (max-width: 600px) {
-    .achievement {
+    .achievement{
         padding: 1rem;
     }
-
     .achievement-cards {
         width: 100%;
     }
@@ -232,10 +229,10 @@
     .achievecard-details1 p {
         font-size: 0.95rem;
     }
-
-    .achievecard-imgcontainer>img {
+    .achievecard-imgcontainer > img {
         width: 70px;
         height: 60px;
     }
 
 }
+
