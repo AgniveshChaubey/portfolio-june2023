@@ -13,6 +13,7 @@ import CloseIcon from '@material-ui/icons/Close';
 import './Navbar.css';
 import { headerData } from '../../data/headerData';
 import { ThemeContext } from '../../contexts/ThemeContext';
+import ThemeToggler from '../ThemeToggler/ThemeToggler';
 
 function Navbar() {
     const { theme, setHandleDrawer } = useContext(ThemeContext);
@@ -137,11 +138,16 @@ function Navbar() {
                     {shortname(headerData.name)}
                 </h1>
 
+                <div className='nav-right'>
+                <div className='theme-toggler'>
+                <ThemeToggler />
+                </div>
                 <IoMenuSharp
                     className={classes.navMenu}
                     onClick={handleDrawerOpen}
                     aria-label='Menu'
                 />
+                </div>
             </div>
             <Drawer
                 variant='temporary'
