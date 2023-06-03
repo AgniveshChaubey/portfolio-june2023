@@ -1,7 +1,6 @@
 import gcp from "../assets/svg/skills/gcp.svg";
 import html from "../assets/svg/skills/html.svg";
 import docker from "../assets/svg/skills/docker.svg";
-import css from "../assets/svg/skills/css.svg";
 import javascript from "../assets/svg/skills/javascript.svg";
 import bootstrap from "../assets/svg/skills/bootstrap.svg";
 import react from "../assets/svg/skills/react.svg";
@@ -12,8 +11,8 @@ import go from "../assets/svg/skills/go.svg";
 import php from "../assets/svg/skills/php.svg";
 import nginx from "../assets/svg/skills/nginx.svg";
 import figma from "../assets/svg/skills/figma.svg";
-import markdown from "../assets/svg/skills/markdown.svg";
-import canva from "../assets/svg/skills/canva.svg";
+import kubernetes from "../assets/svg/skills/kubernetes.svg";
+import nodejs from "../assets/svg/skills/nodejs.svg";
 
 export const skillsImage = (skill) => {
   const skillID = skill.toLowerCase();
@@ -25,8 +24,11 @@ export const skillsImage = (skill) => {
     case "docker":
       return docker;
 
-    case "css":
-      return css;
+    case "nodejs":
+      return nodejs;
+
+    case "kubernetes":
+      return kubernetes;
 
     case "javascript":
       return javascript;
@@ -58,10 +60,6 @@ export const skillsImage = (skill) => {
     case "figma":
       return figma;
 
-    case "markdown":
-      return markdown;
-    case "canva":
-      return canva;
     default:
       break;
   }
