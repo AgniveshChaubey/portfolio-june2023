@@ -3,7 +3,6 @@ import { Helmet } from 'react-helmet'
 
 import { Navbar, Footer, Landing, About, Skills, Testimonials, Blog, Education, Experience, Contacts, Projects, Services, Achievement } from '../../components'
 import { headerData } from '../../data/headerData'
-import ThemeToggler from '../../components/ThemeToggler/ThemeToggler'
 
 function Main() {
     return (
@@ -15,7 +14,6 @@ function Main() {
             <Navbar />
             <Landing />
             <About />
-            <ThemeToggler />
             <Education />
             <Skills />
             <Experience />

@@ -4,11 +4,13 @@ import { useContext } from "react";
 import { ThemeContext } from "../../contexts/ThemeContext";
 
 const ThemeToggler = () => {
-  const {theme} = useContext(ThemeContext)
+  const {theme, handleThemeToggle} = useContext(ThemeContext)
   const [isDark, setIsDark] = useState(window.matchMedia('(prefers-color-scheme: dark)').matches);
 
+  
   const handleToggle = () => {
     setIsDark(!isDark);
+    handleThemeToggle(isDark);
   };
 
   return (
