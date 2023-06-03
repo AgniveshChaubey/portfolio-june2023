@@ -1,6 +1,6 @@
 /* eslint-disable */
-import { blueThemeLight, blueThemeDark } from "../theme/theme";
+import { orangeThemeDark, orangeThemeLight, blueThemeLight, blueThemeDark, greenThemeLight, greenThemeDark} from "../theme/theme";
 
 export const themeData = {
-  theme: blueThemeDark,
+  theme: orangeThemeDark,
 };
