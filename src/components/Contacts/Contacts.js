@@ -171,12 +171,14 @@ function Contacts() {
                                     Name
                                 </label>
                                 <input
+                                id='Name'
                                     placeholder='John Doe'
                                     value={name}
                                     onChange={(e) => setName(e.target.value)}
                                     type='text'
                                     name='Name'
                                     className={`form-input ${classes.input}`}
+                                    autoComplete='name'
                                 />
                             </div>
                             <div className='input-container'>
@@ -187,12 +189,14 @@ function Contacts() {
                                     Email
                                 </label>
                                 <input
+                                id='Email'
                                     placeholder='John@doe.com'
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
                                     type='email'
                                     name='Email'
                                     className={`form-input ${classes.input}`}
+                                    autoComplete='email'
                                 />
                             </div>
                             <div className='input-container'>
@@ -203,6 +207,7 @@ function Contacts() {
                                     Message
                                 </label>
                                 <textarea
+                                id='Message'
                                     placeholder='Type your message....'
                                     value={message}
                                     onChange={(e) => setMessage(e.target.value)}
