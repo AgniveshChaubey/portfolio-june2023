@@ -6,6 +6,6 @@ export const headerData = {
   title: "Full Stack Developer",
   desciption:
     "Amidst lines of code and endless possibilities, he found his passion. The rhythm of logic and the symphony of algorithms captured his attention. With every keystroke, he knew he was shaping a digital world, one elegant solution at a time. ",
-  image: { profilePhoto },
+  image: profilePhoto,
   resumePdf: resume,
 };

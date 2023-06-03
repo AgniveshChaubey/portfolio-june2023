@@ -49,14 +49,4 @@ export const blogData = [
       "https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://www.filepicker.io/api/file/fGWjtyQtG4JE7UXgaPAN",
     url: "https://agnivesh.hashnode.dev/reactjs-mastery-chapter-2",
   },
-  {
-    id: 5,
-    title: "Mastering JSON Schema: From Basics to Advanced Features",
-    description:
-      "This blog provides a comprehensive guide on JSON Schema, covering topics such as validation, advanced features like schema referencing, conditional validation, and schema combinations.",
-    date: "Apr 04, 2023",
-    image:
-      "https://nordicapis.com/wp-content/uploads/A-Guide-to-JSON-Schema-1024x576.png",
-    url: "https://agnivesh.hashnode.dev/reactjs-mastery-chapter-2",
-  },
 ];

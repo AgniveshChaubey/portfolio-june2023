@@ -4,7 +4,6 @@ export const skillsData = [
   "Figma",
   "CSS",
   "React",
-  "Node JS",
   "Docker",
   "MongoDB",
   "Markdown",

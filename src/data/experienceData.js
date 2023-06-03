@@ -17,7 +17,7 @@ export const experienceData = [
         id: 3,
         company: 'Postman (JSON Schema Org)',
         jobtitle: 'Internship (Google Summer of Code)',
-        startYear: '2023',
+        startYear: 'May 2023',
         endYear: 'Present'
     },
 ]
