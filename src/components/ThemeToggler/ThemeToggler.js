@@ -1,20 +1,23 @@
 import React, { useState } from "react";
 import './ThemeToggler.css';
+import { useContext } from "react";
+import { ThemeContext } from "../../contexts/ThemeContext";
 
 const ThemeToggler = () => {
-  const [isSlidingMode, setIsSlidingMode] = useState(false);
+  const {theme} = useContext(ThemeContext)
+  const [isDark, setIsDark] = useState(window.matchMedia('(prefers-color-scheme: dark)').matches);
 
   const handleToggle = () => {
-    setIsSlidingMode(!isSlidingMode);
+    setIsDark(!isDark);
   };
 
   return (
-    <div className={`toggle-container ${isSlidingMode ? "slide" : ""}`}>
+    <div className={`toggle-container ${isDark ? "slide" : ""}`} style={isDark ? { backgroundColor: theme.primary } : { backgroundColor: '#8a8884' }}>
       <label htmlFor="sliding-mode-toggle">
         <input
           id="sliding-mode-toggle"
           type="checkbox"
-          checked={isSlidingMode}
+          checked={isDark}
           onChange={handleToggle}
         />
         <div className="toggle-slider"></div>
