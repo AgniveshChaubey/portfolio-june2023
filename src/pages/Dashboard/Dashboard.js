@@ -19,11 +19,12 @@ import { blogData } from "../../data/blogData";
 import { headerData } from "../../data/headerData";
 import { contactsData } from "../../data/contactsData";
 import { socialsData } from "../../data/socialsData";
-import UpdateHeader from "./EachSection/UpdateHeaderData";
-import UpdateAboutData from "./EachSection/UpdateAboutData";
-import UpdateEducationData from "./EachSection/UpdateEducationData";
-import UpdateExperienceData from "./EachSection/UpdateExperienceData";
-import UpdateProjectsData from "./EachSection/UpdateProjectsData";
+import UpdateHeader from "./UpdateData/UpdateHeaderData";
+import UpdateAboutData from "./UpdateData/UpdateAboutData";
+import UpdateEducationData from "./UpdateData/UpdateEducationData";
+import UpdateExperienceData from "./UpdateData/UpdateExperienceData";
+import UpdateProjectsData from "./UpdateData/UpdateProjectsData";
+import UpdateAchievementsData from "./UpdateData/UpdateAchievementsData";
 
 function Dashboard() {
   const [search, setSearch] = useState("");
@@ -255,6 +256,21 @@ function Dashboard() {
           path="/update-projects"
           element={
             <UpdateProjectsData
+              theme={theme}
+              handleContactForm={handleContactForm}
+              classes={classes}
+              success={success}
+              open={open}
+              handleClose={handleClose}
+              errMsg={errMsg}
+            />
+          }
+        />
+
+        <Route
+          path="/update-achievements"
+          element={
+            <UpdateAchievementsData
               theme={theme}
               handleContactForm={handleContactForm}
               classes={classes}
