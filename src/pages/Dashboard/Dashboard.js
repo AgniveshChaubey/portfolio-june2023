@@ -23,6 +23,7 @@ import UpdateHeader from "./EachSection/UpdateHeaderData";
 import UpdateAboutData from "./EachSection/UpdateAboutData";
 import UpdateEducationData from "./EachSection/UpdateEducationData";
 import UpdateExperienceData from "./EachSection/UpdateExperienceData";
+import UpdateProjectsData from "./EachSection/UpdateProjectsData";
 
 function Dashboard() {
   const [search, setSearch] = useState("");
@@ -239,6 +240,21 @@ function Dashboard() {
           path="/update-experience"
           element={
             <UpdateExperienceData
+              theme={theme}
+              handleContactForm={handleContactForm}
+              classes={classes}
+              success={success}
+              open={open}
+              handleClose={handleClose}
+              errMsg={errMsg}
+            />
+          }
+        />
+
+        <Route
+          path="/update-projects"
+          element={
+            <UpdateProjectsData
               theme={theme}
               handleContactForm={handleContactForm}
               classes={classes}

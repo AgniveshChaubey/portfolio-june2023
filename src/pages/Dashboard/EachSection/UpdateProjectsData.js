@@ -4,7 +4,7 @@ import CloseIcon from "@material-ui/icons/Close";
 import { AiOutlineSend, AiOutlineCheckCircle } from "react-icons/ai";
 import { Snackbar, IconButton, SnackbarContent } from "@material-ui/core";
 
-const UpdateExperienceData = ({
+const UpdateProjectsData = ({
   theme,
   handleContactForm,
   classes,
@@ -14,10 +14,12 @@ const UpdateExperienceData = ({
   errMsg,
 }) => {
   const [id, setId] = useState("");
-  const [company, setCompany] = useState("");
-  const [jobtitle, setJobTitle] = useState("");
-  const [startYear, setStartYear] = useState("");
-  const [endYear, setEndYear] = useState("");
+  const [projectName, setProjectName] = useState("");
+  const [projectDesc, setProjectDesc] = useState("");
+  const [tags, setTags] = useState("");
+  const [code, setCode] = useState("");
+  const [demo, setDemo] = useState("");
+  const [image, setImage] = useState("");
 
   return (
     <div
@@ -26,7 +28,7 @@ const UpdateExperienceData = ({
       style={{ backgroundColor: theme.secondary }}
     >
       <div className="contacts--container">
-        <h1 style={{ color: theme.primary }}>Update Experience</h1>
+        <h1 style={{ color: theme.primary }}>Update Projects</h1>
         <div className="header-body">
           <div className="header-form">
             <form onSubmit={handleContactForm}>
@@ -48,66 +50,98 @@ const UpdateExperienceData = ({
                 </div>
 
                 <div className="input-container">
-                  <label htmlFor="company" className={classes.label}>
-                    Company Name
+                  <label htmlFor="projectName" className={classes.label}>
+                    Project Name
                   </label>
                   <input
-                    id="company"
-                    placeholder="Enter company name..."
-                    value={company}
-                    onChange={(e) => setCompany(e.target.value)}
+                    id="projectName"
+                    placeholder="Enter project name..."
+                    value={projectName}
+                    onChange={(e) => setProjectName(e.target.value)}
                     type="text"
-                    name="company"
+                    name="projectName"
                     className={`form-input ${classes.input}`}
-                    autoComplete="company"
+                    autoComplete="projectName"
                   />
                 </div>
 
                 <div className="input-container">
-                  <label htmlFor="jobtitle" className={classes.label}>
-                    Job Title
+                  <label htmlFor="projectDesc" className={classes.label}>
+                    Project Description
                   </label>
                   <input
-                    id="jobtitle"
-                    placeholder="Enter  job title..."
-                    value={jobtitle}
-                    onChange={(e) => setJobTitle(e.target.value)}
+                    id="projectDesc"
+                    placeholder="Enter project Desc..."
+                    value={projectDesc}
+                    onChange={(e) => setProjectDesc(e.target.value)}
                     type="text"
-                    name="jobtitle"
+                    name="projectDesc"
                     className={`form-input ${classes.input}`}
-                    autoComplete="jobtitle"
+                    autoComplete="projectDesc"
                   />
                 </div>
 
                 <div className="input-container">
-                  <label htmlFor="startyear" className={classes.label}>
-                    Start Year
+                  <label htmlFor="tags" className={classes.label}>
+                    Tags (comma seperated)
                   </label>
                   <input
-                    id="startyear"
-                    placeholder="Year course started..."
-                    value={startYear}
-                    onChange={(e) => setStartYear(e.target.value)}
+                    id="tags"
+                    placeholder="e.g- react, bootstrap, git, etc."
+                    value={tags}
+                    onChange={(e) => setTags(e.target.value)}
                     type="text"
-                    name="startyear"
+                    name="tags"
                     className={`form-input ${classes.input}`}
-                    autoComplete="startyear"
+                    autoComplete="tags"
                   />
                 </div>
 
                 <div className="input-container">
-                  <label htmlFor="endyear" className={classes.label}>
-                    End Year
+                  <label htmlFor="code" className={classes.label}>
+                    Code Url
                   </label>
                   <input
-                    id="endtyear"
-                    placeholder="Year course ended..."
-                    value={endYear}
-                    onChange={(e) => setEndYear(e.target.value)}
+                    id="code"
+                    placeholder="Enter code url..."
+                    value={code}
+                    onChange={(e) => setCode(e.target.value)}
                     type="text"
-                    name="endyear"
+                    name="code"
                     className={`form-input ${classes.input}`}
-                    autoComplete="endyear"
+                    autoComplete="code"
+                  />
+                </div>
+
+                <div className="input-container">
+                  <label htmlFor="demo" className={classes.label}>
+                    Demo Url
+                  </label>
+                  <input
+                    id="demo"
+                    placeholder="Enter live project url..."
+                    value={demo}
+                    onChange={(e) => setDemo(e.target.value)}
+                    type="text"
+                    name="demo"
+                    className={`form-input ${classes.input}`}
+                    autoComplete="demo"
+                  />
+                </div>
+
+                <div className="input-container">
+                  <label htmlFor="image" className={classes.label}>
+                    Image Url
+                  </label>
+                  <input
+                    id="image"
+                    placeholder="Enter image url..."
+                    value={image}
+                    onChange={(e) => setImage(e.target.value)}
+                    type="text"
+                    name="image"
+                    className={`form-input ${classes.input}`}
+                    autoComplete="image"
                   />
                 </div>
 
@@ -174,4 +208,4 @@ const UpdateExperienceData = ({
   );
 };
 
-export default UpdateExperienceData;
+export default UpdateProjectsData;

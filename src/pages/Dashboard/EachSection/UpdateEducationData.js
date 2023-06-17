@@ -100,7 +100,7 @@ const UpdateEducationData = ({
                     End Year
                   </label>
                   <input
-                    id="startyear"
+                    id="endyear"
                     placeholder="Year course ended..."
                     value={endYear}
                     onChange={(e) => setEndYear(e.target.value)}
