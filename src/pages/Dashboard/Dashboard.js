@@ -25,6 +25,7 @@ import UpdateEducationData from "./UpdateData/UpdateEducationData";
 import UpdateExperienceData from "./UpdateData/UpdateExperienceData";
 import UpdateProjectsData from "./UpdateData/UpdateProjectsData";
 import UpdateAchievementsData from "./UpdateData/UpdateAchievementsData";
+import UpdateBlogData from "./UpdateData/UpdateBlogData";
 
 function Dashboard() {
   const [search, setSearch] = useState("");
@@ -271,6 +272,21 @@ function Dashboard() {
           path="/update-achievements"
           element={
             <UpdateAchievementsData
+              theme={theme}
+              handleContactForm={handleContactForm}
+              classes={classes}
+              success={success}
+              open={open}
+              handleClose={handleClose}
+              errMsg={errMsg}
+            />
+          }
+        />
+
+        <Route
+          path="/update-blogs"
+          element={
+            <UpdateBlogData
               theme={theme}
               handleContactForm={handleContactForm}
               classes={classes}
