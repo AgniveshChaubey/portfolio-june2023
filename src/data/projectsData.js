@@ -1,6 +1,6 @@
-import one from "../assets/svg/projects/one.svg";
-import two from "../assets/svg/projects/two.svg";
-import three from "../assets/svg/projects/three.svg";
+import money from "../assets/svg/projects/money.png";
+import calculator from "../assets/svg/projects/calculator.png";
+import markdown from "../assets/svg/projects/markdown.svg";
 
 export const projectsData = [
   {
@@ -11,7 +11,7 @@ export const projectsData = [
     tags: ["React", " Bootstrap"],
     code: "https://github.com/AgniveshChaubey",
     demo: "https://lets-track-it.netlify.app/",
-    image: one,
+    image: money,
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ export const projectsData = [
     tags: ["HTML", "JavaScript", "CSS"],
     code: "https://github.com/AgniveshChaubey/fcc-calculator",
     demo: "https://agniveshchaubey.github.io/fcc-calculator/",
-    image: two,
+    image: calculator,
   },
   {
     id: 3,
@@ -31,6 +31,6 @@ export const projectsData = [
     tags: ["JavaScript", "Bootstrap"],
     code: "https://github.com/AgniveshChaubey/fcc-markdown-previewer",
     demo: "https://agniveshchaubey.github.io/fcc-markdown-previewer/",
-    image: three,
+    image: markdown,
   },
 ];
