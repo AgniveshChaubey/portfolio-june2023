@@ -34,7 +34,7 @@ function App() {
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/projects" element={<ProjectPage />} />
           {/* <Route path="dashboard" element={<BlogPage />} /> */}
-          <Route path="dashboard" element={<Dashboard />} />
+          <Route path="/dashboard/*" element={<Dashboard />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
         <BackToTop />
