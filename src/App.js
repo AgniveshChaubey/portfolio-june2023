@@ -4,6 +4,7 @@ import { Navigate } from 'react-router';
 
 import { ThemeContext } from "./contexts/ThemeContext";
 import { Main, BlogPage, ProjectPage } from "./pages";
+import Dashboard from "./pages/Dashboard/Dashboard";
 // import {BlogPage} from './pages/BlogPage/BlogPage';
 // import ProjectPage from './pages/ProjectPage/ProjectPage';
 // import Main from './pages/Main/Main'
@@ -23,7 +24,6 @@ function App() {
     "%chttps://github.com/AgniveshChaubey",
     `color:${theme.tertiary}; font-size:20px`
   );
-  // console.log = console.warn = console.error = () => {};
 
   return (
     <div className="app">
@@ -33,6 +33,8 @@ function App() {
           <Route path="/" element={<Main />} />
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/projects" element={<ProjectPage />} />
+          {/* <Route path="dashboard" element={<BlogPage />} /> */}
+          <Route path="dashboard" element={<Dashboard />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
         <BackToTop />
