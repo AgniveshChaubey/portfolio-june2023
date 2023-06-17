@@ -16,6 +16,7 @@ const UpdateHeader = ({
   const [name, setName] = useState("");
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
+  const [resumeUrl, setResumeUrl] = useState("");
 
   return (
     <div
@@ -44,6 +45,7 @@ const UpdateHeader = ({
                     autoComplete="name"
                   />
                 </div>
+
                 <div className="input-container">
                   <label htmlFor="Title" className={classes.label}>
                     Title
@@ -61,6 +63,21 @@ const UpdateHeader = ({
                 </div>
 
                 <div className="input-container">
+                  <label htmlFor="ResumeUrl" className={classes.label}>
+                    Resume Url
+                  </label>
+                  <textarea
+                    id="ResumeUrl"
+                    placeholder="Enter resume url..."
+                    value={resumeUrl}
+                    onChange={(e) => setResumeUrl(e.target.value)}
+                    type="text"
+                    name="ResumeUrl"
+                    className={`form-input ${classes.input}`}
+                  />
+                </div>
+
+                <div className="input-container">
                   <label htmlFor="Description" className={classes.label}>
                     Description
                   </label>
@@ -74,10 +91,9 @@ const UpdateHeader = ({
                     className={`form-message ${classes.message}`}
                   />
                 </div>
-
                 <div className="submit-btn">
                   <button type="submit" className={classes.submitBtn}>
-                    <p>{!success ? "Send" : "Sent"}</p>
+                    <p>{!success ? "Update" : "Updated"}</p>
                     <div className="submit-icon">
                       <AiOutlineSend
                         className="send-icon"

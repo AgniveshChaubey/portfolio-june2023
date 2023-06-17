@@ -19,7 +19,8 @@ import { blogData } from "../../data/blogData";
 import { headerData } from "../../data/headerData";
 import { contactsData } from "../../data/contactsData";
 import { socialsData } from "../../data/socialsData";
-import UpdateHeader from "./EachSection/UpdateHeader";
+import UpdateHeader from "./EachSection/UpdateHeaderData";
+import UpdateAboutData from "./EachSection/UpdateAboutData";
 
 function Dashboard() {
   const [search, setSearch] = useState("");
@@ -186,6 +187,7 @@ function Dashboard() {
       </div>
       <Routes>
         <Route path="/" element={<h1>Dashboard Home</h1>} />
+
         <Route
           path="/update-header"
           element={
@@ -200,6 +202,21 @@ function Dashboard() {
             />
           }
         />
+
+      <Route
+        path="/update-about"
+        element={
+          <UpdateAboutData
+            theme={theme}
+            handleContactForm={handleContactForm}
+            classes={classes}
+            success={success}
+            open={open}
+            handleClose={handleClose}
+            errMsg={errMsg}
+          />
+        }
+      />
       </Routes>
     </div>
   );
