@@ -22,6 +22,7 @@ import { socialsData } from "../../data/socialsData";
 import UpdateHeader from "./EachSection/UpdateHeaderData";
 import UpdateAboutData from "./EachSection/UpdateAboutData";
 import UpdateEducationData from "./EachSection/UpdateEducationData";
+import UpdateExperienceData from "./EachSection/UpdateExperienceData";
 
 function Dashboard() {
   const [search, setSearch] = useState("");
@@ -204,35 +205,50 @@ function Dashboard() {
           }
         />
 
-      <Route
-        path="/update-about"
-        element={
-          <UpdateAboutData
-            theme={theme}
-            handleContactForm={handleContactForm}
-            classes={classes}
-            success={success}
-            open={open}
-            handleClose={handleClose}
-            errMsg={errMsg}
-          />
-        }
-      />
+        <Route
+          path="/update-about"
+          element={
+            <UpdateAboutData
+              theme={theme}
+              handleContactForm={handleContactForm}
+              classes={classes}
+              success={success}
+              open={open}
+              handleClose={handleClose}
+              errMsg={errMsg}
+            />
+          }
+        />
 
-<Route
-        path="/update-education"
-        element={
-          <UpdateEducationData
-            theme={theme}
-            handleContactForm={handleContactForm}
-            classes={classes}
-            success={success}
-            open={open}
-            handleClose={handleClose}
-            errMsg={errMsg}
-          />
-        }
-      />
+        <Route
+          path="/update-education"
+          element={
+            <UpdateEducationData
+              theme={theme}
+              handleContactForm={handleContactForm}
+              classes={classes}
+              success={success}
+              open={open}
+              handleClose={handleClose}
+              errMsg={errMsg}
+            />
+          }
+        />
+
+        <Route
+          path="/update-experience"
+          element={
+            <UpdateExperienceData
+              theme={theme}
+              handleContactForm={handleContactForm}
+              classes={classes}
+              success={success}
+              open={open}
+              handleClose={handleClose}
+              errMsg={errMsg}
+            />
+          }
+        />
       </Routes>
     </div>
   );

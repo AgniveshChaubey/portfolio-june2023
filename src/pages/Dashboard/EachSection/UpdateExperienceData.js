@@ -4,7 +4,7 @@ import CloseIcon from "@material-ui/icons/Close";
 import { AiOutlineSend, AiOutlineCheckCircle } from "react-icons/ai";
 import { Snackbar, IconButton, SnackbarContent } from "@material-ui/core";
 
-const UpdateHeader = ({
+const UpdateExperienceData = ({
   theme,
   handleContactForm,
   classes,
@@ -13,84 +13,104 @@ const UpdateHeader = ({
   handleClose,
   errMsg,
 }) => {
-  const [name, setName] = useState("");
-  const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
-  const [resumeUrl, setResumeUrl] = useState("");
+  const [id, setId] = useState("");
+  const [company, setCompany] = useState("");
+  const [jobtitle, setJobTitle] = useState("");
+  const [startYear, setStartYear] = useState("");
+  const [endYear, setEndYear] = useState("");
 
   return (
     <div
-      className="header-data"
+      className="about-data"
       id="contacts"
       style={{ backgroundColor: theme.secondary }}
     >
       <div className="contacts--container">
-        <h1 style={{ color: theme.primary }}>Update Header</h1>
+        <h1 style={{ color: theme.primary }}>Update Experience</h1>
         <div className="header-body">
           <div className="header-form">
             <form onSubmit={handleContactForm}>
               <Grid container spacing={3}>
                 <div className="input-container">
-                  <label htmlFor="Name" className={classes.label}>
-                    Name
+                  <label htmlFor="ID" className={classes.label}>
+                    ID
                   </label>
                   <input
-                    id="Name"
-                    placeholder="Enter name..."
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
+                    id="ID"
+                    placeholder="Enter id..."
+                    value={id}
+                    onChange={(e) => setId(e.target.value)}
                     type="text"
-                    name="Name"
+                    name="ID"
                     className={`form-input ${classes.input}`}
-                    autoComplete="name"
+                    autoComplete="ID"
                   />
                 </div>
 
                 <div className="input-container">
-                  <label htmlFor="Title" className={classes.label}>
-                    Title
+                  <label htmlFor="company" className={classes.label}>
+                    Company Name
                   </label>
                   <input
-                    id="Title"
-                    placeholder="Your title..."
-                    value={title}
-                    onChange={(e) => setTitle(e.target.value)}
+                    id="company"
+                    placeholder="Enter company name..."
+                    value={company}
+                    onChange={(e) => setCompany(e.target.value)}
                     type="text"
-                    name="Title"
+                    name="company"
                     className={`form-input ${classes.input}`}
-                    autoComplete="title"
+                    autoComplete="company"
                   />
                 </div>
 
                 <div className="input-container">
-                  <label htmlFor="ResumeUrl" className={classes.label}>
-                    Resume Url
+                  <label htmlFor="jobtitle" className={classes.label}>
+                    Job Title
                   </label>
-                  <textarea
-                    id="ResumeUrl"
-                    placeholder="Enter resume url..."
-                    value={resumeUrl}
-                    onChange={(e) => setResumeUrl(e.target.value)}
+                  <input
+                    id="jobtitle"
+                    placeholder="Enter  job title..."
+                    value={jobtitle}
+                    onChange={(e) => setJobTitle(e.target.value)}
                     type="text"
-                    name="ResumeUrl"
+                    name="jobtitle"
                     className={`form-input ${classes.input}`}
+                    autoComplete="jobtitle"
                   />
                 </div>
 
                 <div className="input-container">
-                  <label htmlFor="Description" className={classes.label}>
-                    Description
+                  <label htmlFor="startyear" className={classes.label}>
+                    Start Year
                   </label>
-                  <textarea
-                    id="Description"
-                    placeholder="Type your description...."
-                    value={description}
-                    onChange={(e) => setDescription(e.target.value)}
+                  <input
+                    id="startyear"
+                    placeholder="Year course started..."
+                    value={startYear}
+                    onChange={(e) => setStartYear(e.target.value)}
                     type="text"
-                    name="Description"
-                    className={`form-message ${classes.message}`}
+                    name="startyear"
+                    className={`form-input ${classes.input}`}
+                    autoComplete="startyear"
                   />
                 </div>
+
+                <div className="input-container">
+                  <label htmlFor="endyear" className={classes.label}>
+                    End Year
+                  </label>
+                  <input
+                    id="startyear"
+                    placeholder="Year course ended..."
+                    value={endYear}
+                    onChange={(e) => setEndYear(e.target.value)}
+                    type="text"
+                    name="endyear"
+                    className={`form-input ${classes.input}`}
+                    autoComplete="endyear"
+                  />
+                </div>
+
                 <div className="submit-btn">
                   <button type="submit" className={classes.submitBtn}>
                     <p>{!success ? "Update" : "Updated"}</p>
@@ -154,4 +174,4 @@ const UpdateHeader = ({
   );
 };
 
-export default UpdateHeader;
+export default UpdateExperienceData;

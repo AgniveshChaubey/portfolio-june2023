@@ -26,7 +26,7 @@ const UpdateEducationData = ({
       style={{ backgroundColor: theme.secondary }}
     >
       <div className="contacts--container">
-        <h1 style={{ color: theme.primary }}>Education</h1>
+        <h1 style={{ color: theme.primary }}>Update Education</h1>
         <div className="header-body">
           <div className="header-form">
             <form onSubmit={handleContactForm}>

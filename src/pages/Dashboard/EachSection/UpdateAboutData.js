@@ -24,7 +24,7 @@ const UpdateAboutData = ({
       style={{ backgroundColor: theme.secondary }}
     >
       <div className="contacts--container">
-        <h1 style={{ color: theme.primary }}>About</h1>
+        <h1 style={{ color: theme.primary }}>Update About</h1>
         <div className="header-body">
           <div className="header-form">
             <form onSubmit={handleContactForm}>
