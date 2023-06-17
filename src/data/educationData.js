@@ -1,10 +1,10 @@
 export const educationData = [
   {
-    id: 1,
-    institution: "M.D. Vidhyalaya",
-    course: "Primary and Secondary",
-    startYear: "2011",
-    endYear: "2018",
+    id: 3,
+    institution: "Birla Vishvakarma Mahavidhyalaya",
+    course: "Bachelor of Technology",
+    startYear: "2020",
+    endYear: "2024 (Present)",
   },
   {
     id: 2,
@@ -14,10 +14,10 @@ export const educationData = [
     endYear: "2020",
   },
   {
-    id: 3,
-    institution: "Birla Vishvakarma Mahavidhyalaya",
-    course: "Bachelor of Technology",
-    startYear: "2020",
-    endYear: "2024 (Present)",
-  }
+  id: 1,
+    institution: "M.D. Vidhyalaya",
+    course: "Primary and Secondary",
+    startYear: "2011",
+    endYear: "2018",
+  },
 ]
