@@ -11,6 +11,7 @@ import Drawer from '@material-ui/core/Drawer';
 import CloseIcon from '@material-ui/icons/Close';
 import DashboardIcon from '@material-ui/icons/Dashboard';
 import ExitToAppRoundedIcon from '@material-ui/icons/ExitToAppRounded';
+import axios from 'axios';
 
 
 import './Navbar.css';
@@ -19,7 +20,7 @@ import { ThemeContext } from '../../contexts/ThemeContext';
 import ThemeToggler from '../ThemeToggler/ThemeToggler';
 
 function Navbar() {
-    const { theme, isLoggedIn, setHandleDrawer } = useContext(ThemeContext);
+    const { theme, isLoggedIn, handleIsLoggedIn, setHandleDrawer } = useContext(ThemeContext);
 
     const [open, setOpen] = useState(false);
 

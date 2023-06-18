@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import {Navigate} from 'react-router';
 
 import { ThemeContext } from "./contexts/ThemeContext";
 import { Main, BlogPage, ProjectPage } from "./pages";
@@ -34,7 +35,7 @@ function App() {
           <Route path="login" element={<Login />} />
           {isLoggedIn ? <Route path="/dashboard/*" element={<Dashboard />} /> : <Route path="/dashboard/*" element={<h1>Please login to Access!</h1>} /> }
           {/* <Route path="/dashboard/*" element={<Dashboard />} /> */}
-          {/* <Route path="*" element={<Navigate to="/" />} /> */}
+          <Route path="*" element={<Navigate to="/" />} />
         </Routes>
         <BackToTop />
       </Router>

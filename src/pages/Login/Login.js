@@ -103,8 +103,6 @@ function Login() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Perform login API call with username and password
-    // Replace `YOUR_API_ENDPOINT` with the appropriate endpoint URL
 
     axios
       .post("/login", {
