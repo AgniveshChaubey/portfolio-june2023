@@ -156,6 +156,29 @@ function Dashboard() {
         fontSize: "1.8rem",
       },
     },
+    back: {
+      color: theme.primary,
+      position: "relative",
+      top: 25,
+      left: 25,
+      padding: "7px",
+      borderRadius: "50%",
+      boxSizing: "content-box",
+      fontSize: "2rem",
+      cursor: "pointer",
+      boxShadow:
+        theme.type === "dark"
+          ? "3px 3px 6px #ffffff40, -3px -3px 6px #00000050"
+          : "3px 3px 6px #ffffff40, -3px -3px 6px #00000050",
+      transition: "all 0.3s ease-in-out",
+      "&:hover": {
+        color: theme.tertiary,
+        transform: "scale(1.1)",
+      },
+      [t.breakpoints.down("sm")]: {
+        fontSize: "1.8rem",
+      },
+    },
     submitBtn: {
       backgroundColor: theme.primary,
       color: theme.secondary,
@@ -189,7 +212,7 @@ function Dashboard() {
         className="blogPage--header"
         style={{ backgroundColor: theme.primary }}
       >
-        <Link to="/dashboard">
+        <Link to="/">
           <AiOutlineHome className={classes.home} />
         </Link>
         <h1 style={{ color: theme.secondary }}>Dashboard</h1>
