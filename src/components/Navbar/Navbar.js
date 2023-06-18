@@ -9,6 +9,9 @@ import { FaUser, FaFolderOpen } from 'react-icons/fa';
 import { makeStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 import CloseIcon from '@material-ui/icons/Close';
+import DashboardIcon from '@material-ui/icons/Dashboard';
+import ExitToAppRoundedIcon from '@material-ui/icons/ExitToAppRounded';
+
 
 import './Navbar.css';
 import { headerData } from '../../data/headerData';
@@ -16,7 +19,7 @@ import { ThemeContext } from '../../contexts/ThemeContext';
 import ThemeToggler from '../ThemeToggler/ThemeToggler';
 
 function Navbar() {
-    const { theme, setHandleDrawer } = useContext(ThemeContext);
+    const { theme, isLoggedIn, setHandleDrawer } = useContext(ThemeContext);
 
     const [open, setOpen] = useState(false);
 
@@ -140,6 +143,14 @@ function Navbar() {
 
                 <div className='nav-right'>
                 <div className='theme-toggler'>
+                { isLoggedIn ? 
+                    <NavLink to='/dashboard/'>
+                        <DashboardIcon style={{marginRight: "10px", marginBottom: '4px'}} />
+                    </NavLink> :
+                     <NavLink to='/login'>
+                         <ExitToAppRoundedIcon style={{marginRight: "10px", marginBottom: '4px'}} />
+                     </NavLink>
+                }
                 <ThemeToggler />
                 </div>
                 <IoMenuSharp

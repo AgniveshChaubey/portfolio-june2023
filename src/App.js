@@ -1,20 +1,17 @@
 import React, { useContext } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { Navigate } from 'react-router';
 
 import { ThemeContext } from "./contexts/ThemeContext";
 import { Main, BlogPage, ProjectPage } from "./pages";
 import Dashboard from "./pages/Dashboard/Dashboard";
-// import {BlogPage} from './pages/BlogPage/BlogPage';
-// import ProjectPage from './pages/ProjectPage/ProjectPage';
-// import Main from './pages/Main/Main'
 import { BackToTop } from "./components";
 import ScrollToTop from "./utils/ScrollToTop";
 
 import "./App.css";
+import Login from "./pages/Login/Login";
 
 function App() {
-  const { theme } = useContext(ThemeContext);
+  const { theme, isLoggedIn } = useContext(ThemeContext);
 
   console.log(
     "%cPORTFOLIO - AGNIVESH",
@@ -24,6 +21,7 @@ function App() {
     "%chttps://github.com/AgniveshChaubey",
     `color:${theme.tertiary}; font-size:20px`
   );
+  console.log(isLoggedIn);
 
   return (
     <div className="app">
@@ -33,9 +31,10 @@ function App() {
           <Route path="/" element={<Main />} />
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/projects" element={<ProjectPage />} />
-          {/* <Route path="dashboard" element={<BlogPage />} /> */}
-          <Route path="/dashboard/*" element={<Dashboard />} />
-          <Route path="*" element={<Navigate to="/" />} />
+          <Route path="login" element={<Login />} />
+          {isLoggedIn ? <Route path="/dashboard/*" element={<Dashboard />} /> : <Route path="/dashboard/*" element={<h1>Please login to Access!</h1>} /> }
+          {/* <Route path="/dashboard/*" element={<Dashboard />} /> */}
+          {/* <Route path="*" element={<Navigate to="/" />} /> */}
         </Routes>
         <BackToTop />
       </Router>
