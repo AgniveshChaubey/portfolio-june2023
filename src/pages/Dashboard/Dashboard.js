@@ -28,13 +28,7 @@ import UpdateAchievementsData from "./UpdateData/UpdateAchievementsData";
 import UpdateBlogData from "./UpdateData/UpdateBlogData";
 
 function Dashboard() {
-  const [search, setSearch] = useState("");
   const { theme } = useContext(ThemeContext);
-
-  const filteredArticles = blogData.filter((blog) => {
-    const content = blog.title + blog.description + blog.date;
-    return content.toLowerCase().includes(search.toLowerCase());
-  });
 
   const [name, setName] = useState("");
   const [title, setTitle] = useState("");
@@ -174,6 +168,16 @@ function Dashboard() {
     },
   }));
 
+  const buttons = [
+    "Header",
+    "About",
+    "Education",
+    "Experience",
+    "Projects",
+    "Achievements",
+    "Blogs",
+  ];
+
   const classes = useStyles();
 
   return (
@@ -185,13 +189,40 @@ function Dashboard() {
         className="blogPage--header"
         style={{ backgroundColor: theme.primary }}
       >
-        <Link to="/">
+        <Link to="/dashboard">
           <AiOutlineHome className={classes.home} />
         </Link>
         <h1 style={{ color: theme.secondary }}>Dashboard</h1>
       </div>
       <Routes>
-        <Route path="/" element={<h1>Dashboard Home</h1>} />
+        <Route
+          path="/"
+          element={
+            <div className="btn--container">
+              <Grid
+                className="blog-grid"
+                container
+                direction="row"
+                alignItems="center"
+                justifyContent="center"
+                spacing={2}
+                style={{ paddingTop: "10vh", paddingLeft: "10vw" }}
+              >
+                {buttons.map((button, index) => (
+                  <Grid item xs={4} sm={4} md={3} key={index}>
+                    <div className="submit-btn">
+                      <Link to={`update-${button.toLowerCase()}`}>
+                        <button type="submit" className={classes.submitBtn}>
+                          <p>{button}</p>
+                        </button>
+                      </Link>
+                    </div>
+                  </Grid>
+                ))}
+              </Grid>
+            </div>
+          }
+        />
 
         <Route
           path="/update-header"
