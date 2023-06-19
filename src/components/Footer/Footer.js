@@ -17,7 +17,7 @@ function Footer() {
   return (
     <div className="footer" style={{ backgroundColor: theme.secondary }}>
       <p style={{ color: theme.tertiary }}>
-        -{shortname(headerData.name)}
+        Made with 💖 by {shortname(headerData.name)}
       </p>
     </div>
   );

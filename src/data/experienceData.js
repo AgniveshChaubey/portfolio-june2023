@@ -1,10 +1,10 @@
 export const experienceData = [
     {
-        id: 1,
-        company: 'Youtube (500k+ @5minfact)',
-        jobtitle: 'Content Creation',
-        startYear: '2018',
-        endYear: '2021'
+        id: 3,
+        company: 'Postman (JSON Schema Org)',
+        jobtitle: 'Internship (Google Summer of Code)',
+        startYear: 'May 2023',
+        endYear: 'Present'
     },
     {
         id: 2,
@@ -14,10 +14,10 @@ export const experienceData = [
         endYear: 'Present'
     },
     {
-        id: 3,
-        company: 'Postman (JSON Schema Org)',
-        jobtitle: 'Internship (Google Summer of Code)',
-        startYear: 'May 2023',
-        endYear: 'Present'
+        id: 1,
+        company: 'Youtube (500k+ @5minfact)',
+        jobtitle: 'Content Creation',
+        startYear: '2018',
+        endYear: '2021'
     },
 ]

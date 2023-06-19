@@ -1,10 +1,32 @@
+import portfolio from "../assets/svg/projects/portfolio.png";
 import money from "../assets/svg/projects/money.png";
 import calculator from "../assets/svg/projects/calculator.png";
 import markdown from "../assets/svg/projects/markdown.svg";
 
 export const projectsData = [
   {
-    id: 1,
+    id: 5,
+    projectName: "Bowtie - Schema   Implementation Validator",
+    projectDesc:
+      " Tool that aids in validating various implementations against Official Test Suites and provides an intuitive visualization of the results.",
+    tags: ["React", "Bootstrap", "JSON Schema"],
+    code: "https://github.com/AgniveshChaubey/portfolio-june2023",
+    demo: "https://agnivesh.netlify.app/",
+    image:
+      "https://bowtie-json-schema.readthedocs.io/en/latest/_static/dreamed.png",
+  },
+  {
+    id: 4,
+    projectName: "Full-Stack Portfolio Manager",
+    projectDesc:
+      "Create a dynamic portfolio and keep its information updated with a secure dashboard.",
+    tags: ["React", "Context APIs", "Express.js", "JWT"],
+    code: "https://github.com/AgniveshChaubey/portfolio-june2023",
+    demo: "https://agnivesh.netlify.app/",
+    image: portfolio,
+  },
+  {
+    id: 3,
     projectName: "Budget Tracker App",
     projectDesc:
       "Track and manage your expenses with ease using our intuitive budget tracker app.",
@@ -24,7 +46,7 @@ export const projectsData = [
     image: calculator,
   },
   {
-    id: 3,
+    id: 1,
     projectName: "Markdown Previewer",
     projectDesc:
       "App that converts Markdown input to HTML optputs with the help of Marked library.",
