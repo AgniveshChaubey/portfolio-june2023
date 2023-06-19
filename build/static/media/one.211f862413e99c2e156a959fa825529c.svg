@@ -1,4 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-  <path fill="#FFD700" d="M12 2C6.48 2 2 6.48 2 12v7a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1v-7c0-5.52-4.48-10-10-10zm-1 14H8v-2h3v-2H8V8h3V6H7.5c-.83 0-1.5.67-1.5 1.5v3c0 .83.67 1.5 1.5 1.5H9v2H6v2h2.5c.83 0 1.5-.67 1.5-1.5v-3c0-.83-.67-1.5-1.5-1.5z"/>
-  <text x='7.5' y="17" fill="#000" font-size="14px" font-weight="bold">$</text>
-</svg>
