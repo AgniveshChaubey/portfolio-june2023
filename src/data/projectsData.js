@@ -10,8 +10,8 @@ export const projectsData = [
     projectDesc:
       " Tool that aids in validating various implementations against Official Test Suites and provides an intuitive visualization of the results.",
     tags: ["React", "Bootstrap", "JSON Schema"],
-    code: "https://github.com/AgniveshChaubey/portfolio-june2023",
-    demo: "https://agnivesh.netlify.app/",
+    code: "https://github.com/bowtie-json-schema/bowtie/pull/241",
+    demo: "https://bowtie-json-schema.github.io/bowtie/",
     image:
       "https://bowtie-json-schema.readthedocs.io/en/latest/_static/dreamed.png",
   },
